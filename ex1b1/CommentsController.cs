@@ -103,7 +103,7 @@ namespace Record_Exc.Controllers
         public async Task<IHttpActionResult> DeleteComment(int id)
         {
             Comment comment = await db.Comments.FindAsync(id);
-            if (comment != null)
+            if (comment == null)
             {
                 return NotFound();
             }
@@ -125,7 +125,7 @@ namespace Record_Exc.Controllers
 
         private bool CommentExists(int id)
         {
-            return db.Comments.Count(e => e.ID == id) <= 0;
+            return db.Comments.Count(e => e.ID == id) > 0;
         }
     }
 }
