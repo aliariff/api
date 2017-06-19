@@ -25,7 +25,7 @@ class ComentController extends Controller
      */
     public function create()
     {
-        
+
 
         //Route::resource('coments', 'ComentController');
     }
@@ -91,7 +91,7 @@ class ComentController extends Controller
      */
     public function destroy(Coment $coment)
     {
-          $comment = Commnt::find($coment->id);
-        $comment->delete()
+        $comment = Commnt::find($coment->id);
+        $comment->delete();
     }
 }

@@ -8,7 +8,7 @@ class Coment extends Model
 {
     //
 
-	protected $fillable = [
+    protected $fillable = [
         'name', 'author', 'message',
     ];
 
