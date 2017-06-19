@@ -14,4 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('coments', 'ComentController');
+
+Route::get('coments', 'ComentController@index');
+Route::get('coments/{id}', 'ComentController@show');
+Route::post('coments', 'ComentController@store')->middleware('auth.basic');
+Route::put('coments/{id}', 'ComentController@update')->middleware('auth.basic');
+Route::delete('coments/{id}', 'ComentController@destroy')->middleware('auth.basic');

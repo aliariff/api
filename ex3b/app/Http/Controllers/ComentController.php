@@ -55,7 +55,7 @@ class ComentController extends Controller
      */
     public function show(Coment $coment)
     {
-        $comment = Commnt::find($coment->id);
+        $comment = Coment::find($coment->id);
         return $comment->toArray();
     }
 
@@ -79,7 +79,7 @@ class ComentController extends Controller
      */
     public function update(Request $request, Coment $coment)
     {
-        $comment = Commnt::find($cmment->id);
+        $comment = Coment::find($cmment->id);
         $comment->delete();
     }
 
@@ -91,7 +91,7 @@ class ComentController extends Controller
      */
     public function destroy(Coment $coment)
     {
-        $comment = Commnt::find($coment->id);
+        $comment = Coment::find($coment->id);
         $comment->delete();
     }
 }
